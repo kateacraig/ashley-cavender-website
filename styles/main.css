@@ -346,3 +346,13 @@ footer {
   height: auto;
   margin-top: -50px;
 }
+
+.footer-donate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.footer-donate-other {
+  margin-top: 1rem;
+}
