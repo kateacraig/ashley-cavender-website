@@ -75,18 +75,8 @@ section {
   padding: 100px 0;
 }
 
-section {
-  padding: 100px 0;
-}
-
 section.hero {
-  padding: 150px 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  box-shadow: var(--image-shadow);
+  padding: 150px 50;
 }
 
 a {
@@ -208,7 +198,7 @@ p {
 /* Header Styles */
 header {
   padding: 1rem 0;
-  position: sticky;
+
   top: 0;
   z-index: 1000;
 }
@@ -311,5 +301,48 @@ nav {
 
 .hero h1 {
   font-family: "Boogaloo";
-  font-size: 6rem;
+  font-size: 180px;
+  text-align: right;
+  margin-top: 40px;
+}
+
+.hero-last-name {
+  margin-top: -4rem;
+}
+
+.hero h2 {
+  font-family: "Boogaloo";
+  font-size: 35px;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  margin-top: -2rem;
+}
+
+.hero-oak-leaf {
+  height: 30px;
+  width: auto;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+footer {
+  margin-top: 4rem;
+}
+
+/* Footer Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+/* Footer Logo */
+.footer-logo img {
+  width: 300px;
+  height: auto;
+  margin-top: -50px;
 }
