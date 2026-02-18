@@ -1,0 +1,315 @@
+/* Google Fonts */
+.playfair-display-<uniquifier > {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.noto-sans-<uniquifier > {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.boogaloo-regular {
+  font-family: "Boogaloo", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* CSS Variables */
+:root {
+  /* Brand Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --dark-gray: #121412;
+  --light-gray: #bcbcbc;
+  --purple: #585379;
+
+  /* Typography */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Montserrat", sans-serif;
+
+  /* Transitions */
+  --transition: all 150ms ease-in-out;
+
+  /* Shadows */
+  --image-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Border Radius */
+  --radius-sm: 5px;
+  --radius-md: 10px;
+
+  /* Border */
+  --border: 2px solid var(--white);
+
+  /* Breakpoints */
+  --desktop: 1200px;
+  --tablet: 760px;
+  --mobile: 460px;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-center {
+  text-align: center;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--white);
+  line-height: 1.6;
+  background-color: var(--black);
+}
+
+section {
+  padding: 100px 0;
+}
+
+section {
+  padding: 100px 0;
+}
+
+section.hero {
+  padding: 150px 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: var(--image-shadow);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.border {
+  border: var(--border);
+  margin: 0 50px;
+}
+
+.blue-border {
+  border: 5px solid var(--light-blue);
+  padding: 20px;
+}
+
+.blue-project-border {
+  border: 5px solid var(--light-blue);
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--white);
+  color: var(--light-blue);
+  padding: 0.8rem 1.3rem;
+  width: 300px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--light-blue);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.btn:hover {
+  background-color: var(--light-blue);
+  border: 1.5px solid var(--white);
+  color: var(--white);
+}
+
+.btn-donate {
+  background-color: var(--purple);
+  color: var(--white);
+  height: 60px;
+  width: 150px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex; /* enables flexbox centering */
+  justify-content: center; /* centers LEFT to RIGHT */
+  align-items: center; /* centers TOP to BOTTOM */
+  font-size: 1rem;
+}
+
+.btn-donate:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--purple);
+  color: var(--white);
+}
+
+.nav-menu > li > a.btn-donate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: var(--desktop);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content {
+  max-width: 1000px;
+}
+
+/* Header Styles */
+header {
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  max-width: var(--desktop);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+/* Navigation */
+nav {
+  order: 2;
+}
+
+.nav-header {
+  padding: 0;
+  padding-top: 2rem;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-menu > li {
+  position: relative;
+}
+
+.nav-menu > li > a {
+  color: var(--white);
+  text-shadow: -0.5px -0.5px 0 var(--light-blue),
+    0.5px -0.5px 0 var(--light-blue), -0.5px 0.5px 0 var(--light-blue),
+    0.5px 0.5px 0 var(--light-blue);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  font-family: "Boogaloo";
+  display: block;
+  font-size: 2rem;
+}
+
+.nav-menu > li > a:hover {
+  color: #585379;
+  font-weight: 700;
+  text-shadow: -0.6px -0.6px 0 var(--white), 0.6px -0.6px 0 var(--white),
+    -0.6px 0.6px 0 var(--white), 0.6px 0.6px 0 var(--white);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--white);
+  margin: 3px 0;
+  transition: var(--transition);
+  border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.background-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+    url(../images/background-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ==========================================
+   Home Page
+   ========================================== */
+
+/* Hero Section */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.hero h1 {
+  font-family: "Boogaloo";
+  font-size: 6rem;
+}
