@@ -523,6 +523,16 @@ nav {
   margin: 0 auto;
 }
 
+.slogan-ashley-grid-item h3 {
+  font-family: "Boogaloo";
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 2.5rem;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
 /* ==========================================
    Footer
    ========================================== */
@@ -828,6 +838,23 @@ footer {
     font-size: 1.5rem;
     line-height: 1.5;
     font-family: "Boogaloo";
+  }
+
+  .slogan-ashley-grid,
+  .slogan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slogan-grid {
+    margin-top: 4rem;
+  }
+
+  .slogan-grid {
+    margin-top: -2rem;
+  }
+
+  .slogan-ashley-grid-item img {
+    width: 300px;
   }
 
   .footer-follow-ashley {
