@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function updateCountdown() {
-  const targetDate = new Date("August 6, 2026 00:00:00");
+  const targetDate = new Date(2026, 7, 6, 0, 0, 0);
   const now = new Date();
   const diff = targetDate - now;
 
@@ -34,20 +34,19 @@ function updateCountdown() {
     return;
   }
 
-  // Total weeks
-  const totalDays = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const weeks = Math.floor(totalDays / 7);
+  // Build from smallest unit up
+  const totalSeconds = Math.floor(diff / 1000);
+  const totalMinutes = Math.floor(totalSeconds / 60);
+  const totalHours = Math.floor(totalMinutes / 60);
+  const totalDays = Math.floor(totalHours / 24);
+  const totalWeeks = Math.floor(totalDays / 7);
 
-  // Days remaining after full weeks
+  // Each unit is the remainder after the larger unit is removed
+  const weeks = totalWeeks;
   const days = totalDays % 7;
+  const hours = totalHours % 24;
+  const seconds = totalSeconds % 60;
 
-  // Hours remaining after full days
-  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-  // Seconds remaining after full hours
-  const seconds = Math.floor((diff % (1000 * 60 * 60)) / 1000);
-
-  // Pad with leading zero if single digit
   const pad = (n) => String(n).padStart(2, "0");
 
   document.getElementById("weeks").textContent = pad(weeks);
@@ -56,6 +55,5 @@ function updateCountdown() {
   document.getElementById("seconds").textContent = pad(seconds);
 }
 
-// Run immediately and then update every second
 updateCountdown();
 setInterval(updateCountdown, 1000);
