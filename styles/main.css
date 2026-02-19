@@ -237,7 +237,7 @@ p {
 .btn-donate-footer:hover {
   background-color: var(--white);
   border: 1.5px solid var(--purple);
-  color: var(--white);
+  color: var(--purple);
 }
 
 .nav-menu > li > a.btn-donate {
@@ -447,6 +447,82 @@ nav {
   letter-spacing: 0.1em;
 }
 
+/* Slogan Section */
+
+.slogan h2 {
+  font-family: "Boogaloo";
+  font-size: 70px;
+  margin-top: 8rem;
+  margin-bottom: -2rem;
+}
+
+.slogan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.btn-donate-slogan {
+  background-color: var(--purple);
+  color: var(--white);
+  height: 60px;
+  width: 300px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.btn-donate-slogan:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--purple);
+  color: var(--purple);
+}
+
+.btn-volunteer-slogan {
+  background-color: var(--yellow);
+  color: var(--white);
+  height: 60px;
+  width: 300px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.btn-volunteer-slogan:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--yellow);
+  color: var(--yellow);
+}
+
+.slogan-ashley-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2rem;
+  margin-top: -4rem;
+}
+
+.slogan-ashley-grid-item img {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ==========================================
    Footer
    ========================================== */
@@ -518,7 +594,7 @@ footer {
 .footer-donate-other a:hover {
   background-color: var(--white);
   border: 1.5px solid var(--purple);
-  color: var(--white);
+  color: var(--purple);
 }
 
 .footer-copyright {
