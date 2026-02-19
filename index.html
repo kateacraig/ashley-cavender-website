@@ -54,7 +54,31 @@
       <section class="hero">
         <div class="container">
           <div class="hero-grid">
-            <div class="hero-count-down-clock"></div>
+            <div class="hero-countdown-clock">
+              <div class="countdown-container">
+                <h2 class="text-left">Days till Election Day</h2>
+                <div class="countdown-wrapper mt-4">
+                  <div class="countdown-grid">
+                    <div class="countdown-box">
+                      <span class="countdown-number" id="weeks">00</span>
+                      <span class="countdown-label">Weeks</span>
+                    </div>
+                    <div class="countdown-box">
+                      <span class="countdown-number" id="days">00</span>
+                      <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-box">
+                      <span class="countdown-number" id="hours">00</span>
+                      <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-box">
+                      <span class="countdown-number" id="seconds">00</span>
+                      <span class="countdown-label">Seconds</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="hero-name">
               <h1>
                 <div>Ashley</div>
@@ -82,8 +106,8 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-important-links">
-            <h3>Important Links</h3>
-            <ul>
+            <h3 class="mb-2">Links</h3>
+            <ul class="important-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="issues.html">Issues</a></li>
@@ -94,15 +118,41 @@
             </ul>
           </div>
           <div class="footer-follow-ashley">
-            <h3>Contact Ashley</h3>
+            <h3 class="mb-2">Contact Ashley</h3>
+            <h4>
+              Email Ashley:
+              <a href="mailto:ashleyc4county@gmail.com"
+                >ashleyc4county@gmail.com</a
+              >
+            </h4>
+            <h3 class="mb-2 mt-2">Follow Ashley</h3>
+            <div class="footer-social-icons">
+              <div class="footer-social-icon">
+                <a
+                  href="https://www.facebook.com/AshleyCforCommission"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </div>
+              <div class="footer-social-icon">
+                <a
+                  href="https://www.instagram.com/ashleyc_forcounty"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-square-instagram"></i>
+                </a>
+              </div>
+            </div>
           </div>
           <div class="footer-donate">
-            <h3>Help Ashley Win!</h3>
+            <h3 class="text-center mb-2">Help Ashley Win!</h3>
+            <p>Donate today and help Ashley flip this seat!</p>
             <div class="footer-donate-grid">
               <div>
                 <a
                   href="https://secure.actblue.com/donate/ashleyfordistrict3"
-                  class="btn-donate"
+                  class="btn-donate-footer"
                   target="_blank"
                   >$10</a
                 >
@@ -110,7 +160,7 @@
               <div>
                 <a
                   href="https://secure.actblue.com/donate/ashleyfordistrict3"
-                  class="btn-donate"
+                  class="btn-donate-footer"
                   target="_blank"
                   >$25</a
                 >
@@ -118,7 +168,7 @@
               <div>
                 <a
                   href="https://secure.actblue.com/donate/ashleyfordistrict3"
-                  class="btn-donate"
+                  class="btn-donate-footer"
                   target="_blank"
                   >$50</a
                 >
@@ -126,7 +176,7 @@
               <div>
                 <a
                   href="https://secure.actblue.com/donate/ashleyfordistrict3"
-                  class="btn-donate"
+                  class="btn-donate-footer"
                   target="_blank"
                   >$100</a
                 >
@@ -135,18 +185,21 @@
             <div class="footer-donate-other">
               <a
                 href="https://secure.actblue.com/donate/ashleyfordistrict3"
-                class="btn-donate"
+                class="btn-donate-footer"
                 target="_blank"
                 >Other Amount</a
               >
             </div>
-            <div class="footer-logo">
-              <img
-                src="images/logo-transparent.png"
-                alt="White logo no background"
-              />
-            </div>
           </div>
+        </div>
+        <div class="footer-logo">
+          <img
+            src="images/logo-transparent.png"
+            alt="White logo no background"
+          />
+        </div>
+        <div class="footer-copyright text-center mb-2">
+          This website was coded by Kate Craig | Copyright 2026
         </div>
       </div>
     </footer>
