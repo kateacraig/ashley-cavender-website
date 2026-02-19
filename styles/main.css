@@ -394,6 +394,10 @@ nav {
   margin-left: -10px;
 }
 
+.hero-countdown-clock-mobile {
+  display: none;
+}
+
 /* Countdown Wrapper */
 
 .countdown-container {
@@ -457,6 +461,10 @@ footer {
   grid-gap: 2rem;
 }
 
+.footer-mobile-links-grid {
+  display: none;
+}
+
 /* Footer Logo */
 .footer-logo img {
   width: 200px;
@@ -474,6 +482,10 @@ footer {
 
 .footer-donate-other {
   margin-top: 1rem;
+}
+
+.footer-follow-ashley-mobile {
+  display: none;
 }
 
 .footer-follow-ashley h4 {
@@ -511,6 +523,7 @@ footer {
 
 .footer-copyright {
   margin-top: -1rem;
+  font-weight: 300;
 }
 
 .important-links li {
@@ -541,6 +554,10 @@ footer {
 
 /* 1024px breakpoint */
 @media (max-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+  }
+
   .countdown-grid {
     max-width: 500px;
     gap: 20px;
@@ -553,10 +570,69 @@ footer {
   .countdown-box {
     padding: 32px 16px;
   }
+
+  .header-content {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: end;
+    order: 3;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    color: white;
+    background-color: var(--peach);
+    padding: 1rem 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .nav-menu > li {
+    width: 100%;
+  }
+
+  .nav-menu > li > a {
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-donate {
+    width: 40px;
+    padding: 0;
+    justify-content: left;
+    align-items: center;
+  }
 }
 
 /* 768px breakpoint */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 3rem;
+  }
+
   .countdown-grid {
     max-width: 420px;
     gap: 16px;
@@ -576,11 +652,59 @@ footer {
 }
 
 /* 468px breakpoint */
-@media (max-width: 468px) {
+@media (max-width: 430px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-countdown-clock-mobile h2 {
+    text-align: center;
+    color: var(--yellow);
+    font-size: 36px;
+    margin-top: 2rem;
+  }
+
+  .hero h1 {
+    font-family: "Boogaloo";
+    font-size: 100px;
+    text-align: right;
+    margin-top: 0;
+  }
+
+  .hero-last-name {
+    margin-top: -3rem;
+  }
+
+  .hero-name h2 {
+    font-family: "Boogaloo";
+    font-size: 20px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    margin-top: -2rem;
+  }
+
+  .hero-oak-leaf {
+    height: 20px;
+    width: auto;
+    margin-right: -5px;
+    margin-left: -5px;
+  }
+
+  .countdown-container {
+    width: 100%;
+    text-align: left;
+  }
+
   .countdown-grid {
     max-width: 100%;
     gap: 12px;
     padding: 0 16px;
+    margin-top: -2rem;
   }
 
   .countdown-number {
@@ -594,5 +718,64 @@ footer {
   .countdown-box {
     padding: 24px 12px;
     border-radius: 8px;
+  }
+
+  .hero-countdown-clock {
+    display: none;
+  }
+
+  .hero-countdown-clock-mobile {
+    display: grid;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-mobile-links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .important-links {
+    display: none;
+  }
+
+  .important-links-mobile li {
+    list-style: none;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: "Boogaloo";
+  }
+
+  .footer-follow-ashley {
+    display: none;
+  }
+
+  .footer-follow-ashley-mobile {
+    display: grid;
+  }
+
+  .footer-follow-ashley-mobile h4 {
+    font-size: 1.3rem;
+  }
+
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-logo img {
+    margin-top: 0.5rem;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
   }
 }

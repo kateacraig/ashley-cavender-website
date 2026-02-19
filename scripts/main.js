@@ -1,5 +1,8 @@
 // Ashley Cavender Campaign Website - Main JavaScript
 
+// ==========================================
+// Hamburger Menu
+// ==========================================
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
@@ -21,6 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// ==========================================
+// Desktop/Tablet/Mobile Countdown Clock
+// ==========================================
 function updateCountdown() {
   const targetDate = new Date("2026-08-06T00:00:00-04:00");
   const now = new Date();
@@ -31,6 +37,10 @@ function updateCountdown() {
     document.getElementById("days").textContent = "00";
     document.getElementById("hours").textContent = "00";
     document.getElementById("seconds").textContent = "00";
+    document.getElementById("weeks-mobile").textContent = "00";
+    document.getElementById("days-mobile").textContent = "00";
+    document.getElementById("hours-mobile").textContent = "00";
+    document.getElementById("seconds-mobile").textContent = "00";
     return;
   }
 
@@ -49,10 +59,17 @@ function updateCountdown() {
 
   const pad = (n) => String(n).padStart(2, "0");
 
+  // Update desktop clock
   document.getElementById("weeks").textContent = pad(weeks);
   document.getElementById("days").textContent = pad(days);
   document.getElementById("hours").textContent = pad(hours);
   document.getElementById("seconds").textContent = pad(seconds);
+
+  // Update mobile clock
+  document.getElementById("weeks-mobile").textContent = pad(weeks);
+  document.getElementById("days-mobile").textContent = pad(days);
+  document.getElementById("hours-mobile").textContent = pad(hours);
+  document.getElementById("seconds-mobile").textContent = pad(seconds);
 }
 
 updateCountdown();
