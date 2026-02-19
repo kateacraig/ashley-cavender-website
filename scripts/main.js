@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function updateCountdown() {
-  const targetDate = new Date(2026, 7, 6, 0, 0, 0);
+  const targetDate = new Date("2026-08-06T00:00:00-04:00");
   const now = new Date();
   const diff = targetDate - now;
 
