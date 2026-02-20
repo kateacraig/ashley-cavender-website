@@ -484,7 +484,7 @@ nav {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .btn-donate-slogan:hover {
@@ -507,7 +507,7 @@ nav {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .btn-volunteer-slogan:hover {
@@ -548,10 +548,95 @@ nav {
 }
 
 /* ==========================================
+   About Page
+   ========================================== */
+
+/* About Header */
+.about-header {
+  margin: 0;
+  padding: 0;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.about-header h1 {
+  font-family: "Boogaloo";
+  font-size: 82px;
+  text-align: center;
+}
+
+/* About Body */
+
+.about-ashley-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 2rem;
+  margin-top: -2rem;
+}
+
+.about-ashley-photos img {
+  width: 255px;
+  height: auto;
+}
+
+.about-ashley-grid-item h3 {
+  font-family: "Boogaloo";
+  font-size: 46px;
+}
+
+.about-ashley-grid-item p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* About CTA */
+
+.about-page-cta-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 2rem;
+  margin-top: -6rem;
+}
+
+.about-page-cta-grid-item {
+  display: flex;
+  align-items: center;
+}
+
+.about-page-cta-grid-item h3 {
+  font-family: "Boogaloo";
+  font-size: 40px;
+}
+
+.btn-about-cta {
+  background-color: var(--purple);
+  color: var(--white);
+  height: 60px;
+  width: 300px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.btn-about-cta:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--purple);
+  color: var(--purple);
+}
+
+/* ==========================================
    Footer
    ========================================== */
 footer {
   margin-top: 4rem;
+  border-top: 2px solid var(--white);
 }
 
 /* Footer Grid */
@@ -559,6 +644,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-gap: 2rem;
+  margin-top: 3rem;
 }
 
 .footer-mobile-links-grid {
