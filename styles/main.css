@@ -449,6 +449,10 @@ nav {
 
 /* Slogan Section */
 
+.slogan-section {
+  margin-top: 2rem;
+}
+
 .slogan h2 {
   font-family: "Boogaloo";
   font-size: 70px;
@@ -460,6 +464,10 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
+}
+
+.slogan-grid-item h3 {
+  margin-bottom: 3rem;
 }
 
 .btn-donate-slogan {
@@ -515,12 +523,19 @@ nav {
   margin-top: -4rem;
 }
 
+.slogan-ashley-grid-item {
+  display: flex;
+  align-items: center;
+}
+
 .slogan-ashley-grid-item img {
   width: 300px;
   height: auto;
-  border-radius: 50%;
+  border-radius: 220px;
   display: block;
   margin: 0 auto;
+  border: 2px solid var(--yellow);
+  margin-bottom: 4rem;
 }
 
 .slogan-ashley-grid-item h3 {
@@ -528,7 +543,6 @@ nav {
   display: flex;
   justify-content: left;
   align-items: center;
-  margin-top: 2.5rem;
   font-size: 40px;
   line-height: 1.2;
 }
@@ -711,6 +725,10 @@ footer {
     justify-content: left;
     align-items: center;
   }
+
+  .slogan-ashley-grid-item h3 {
+    margin-top: -2rem;
+  }
 }
 
 /* 768px breakpoint */
@@ -849,12 +867,27 @@ footer {
     margin-top: 4rem;
   }
 
-  .slogan-grid {
-    margin-top: -2rem;
-  }
-
   .slogan-ashley-grid-item img {
     width: 300px;
+    margin-top: 1rem;
+  }
+
+  .slogan-ashley-grid-item h3 {
+    margin-top: -2rem;
+    text-align: center;
+  }
+
+  .slogan h2 {
+    font-size: 36px;
+  }
+
+  .btn-volunteer-slogan {
+    margin-bottom: 3rem;
+    margin-top: -1rem;
+  }
+
+  .btn-donate-slogan {
+    margin-top: -1rem;
   }
 
   .footer-follow-ashley {
