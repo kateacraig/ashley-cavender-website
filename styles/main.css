@@ -842,7 +842,7 @@ footer {
 }
 
 /* 468px breakpoint */
-@media (max-width: 430px) {
+@media (max-width: 468px) {
   .container {
     padding: 0 2rem;
   }
