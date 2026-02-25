@@ -20,6 +20,18 @@
   font-style: normal;
 }
 
+.knewave-regular {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.unica-one-regular {
+  font-family: "Unica One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* CSS Variables */
 :root {
   /* Brand Colors */
@@ -27,9 +39,10 @@
   --black: #000000;
   --dark-gray: #121412;
   --light-gray: #bcbcbc;
+  --green: #6faf7b;
   --purple: #585379;
-  --peach: #c17a5e;
-  --yellow: #ca9364;
+  --peach: #c65d3b;
+  --yellow: #c48a2d;
 
   /* Typography */
   --font-heading: "Playfair Display", serif;
@@ -194,10 +207,10 @@ p {
 }
 
 .btn-donate {
-  background-color: var(--purple);
+  background-color: var(--green);
   color: var(--white);
   height: 60px;
-  width: 150px;
+  width: 130px;
   border-radius: 30px;
   border: 1.5px solid var(--white);
   font-weight: 600;
@@ -211,12 +224,12 @@ p {
 
 .btn-donate:hover {
   background-color: var(--white);
-  border: 1.5px solid var(--purple);
+  border: 1.5px solid var(--green);
   color: var(--white);
 }
 
 .btn-donate-footer {
-  background-color: var(--purple);
+  background-color: var(--green);
   color: var(--white);
   height: 60px;
   width: 150px;
@@ -236,8 +249,8 @@ p {
 
 .btn-donate-footer:hover {
   background-color: var(--white);
-  border: 1.5px solid var(--purple);
-  color: var(--purple);
+  border: 1.5px solid var(--green);
+  color: var(--green);
 }
 
 .nav-menu > li > a.btn-donate {
@@ -302,14 +315,14 @@ nav {
     0.5px -0.5px 0 var(--light-blue), -0.5px 0.5px 0 var(--light-blue),
     0.5px 0.5px 0 var(--light-blue);
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   font-family: "Boogaloo";
   display: block;
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 .nav-menu > li > a:hover {
-  color: #585379;
+  color: var(--green);
   font-weight: 700;
   text-shadow: -0.6px -0.6px 0 var(--white), 0.6px -0.6px 0 var(--white),
     -0.6px 0.6px 0 var(--white), 0.6px 0.6px 0 var(--white);
@@ -368,10 +381,14 @@ nav {
 }
 
 .hero h1 {
-  font-family: "Boogaloo";
-  font-size: 180px;
+  font-family: "Knewave", system-ui;
+  font-weight: 500;
+  font-size: 160px;
   text-align: right;
+  line-height: 1.2;
   margin-top: 40px;
+  text-shadow: -1px -1px 0 var(--peach), 1px -1px 0 var(--peach),
+    -1px 1px 0 var(--peach), 1px 1px 0 var(--peach);
 }
 
 .hero-last-name {
@@ -384,7 +401,9 @@ nav {
   text-align: right;
   margin: 0;
   padding: 0;
-  margin-top: -2rem;
+  margin-top: -1rem;
+  text-shadow: -0.5px -0.5px 0 var(--peach), 0.5px -0.5px 0 var(--peach),
+    -0.5px 0.5px 0 var(--peach), 0.5px 0.5px 0 var(--peach);
 }
 
 .hero-oak-leaf {
@@ -403,6 +422,14 @@ nav {
 .countdown-container {
   width: 80%;
   text-align: left;
+}
+
+.countdown-container h2 {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: -2rem;
+  text-shadow: -0.25px -0.25px 0 var(--white), 0.25px -0.25px 0 var(--white),
+    -0.25px 0.25px 0 var(--white), 0.25px 0.25px 0 var(--white);
 }
 
 .countdown-wrapper {
@@ -458,6 +485,7 @@ nav {
   font-size: 70px;
   margin-top: 8rem;
   margin-bottom: -2rem;
+  font-weight: normal;
 }
 
 .slogan-grid {
@@ -534,7 +562,7 @@ nav {
   border-radius: 220px;
   display: block;
   margin: 0 auto;
-  border: 2px solid var(--yellow);
+  border: 2px solid var(--green);
   margin-bottom: 4rem;
 }
 
@@ -560,9 +588,12 @@ nav {
 }
 
 .about-header h1 {
-  font-family: "Boogaloo";
+  font-family: "Knewave", system-ui;
   font-size: 82px;
   text-align: center;
+  font-weight: 400;
+  text-shadow: -1px -1px 0 var(--peach), 1px -1px 0 var(--peach),
+    -1px 1px 0 var(--peach), 1px 1px 0 var(--peach);
 }
 
 /* About Body */
@@ -683,7 +714,7 @@ footer {
 }
 
 .footer-donate-other a {
-  background-color: var(--purple);
+  background-color: var(--green);
   color: var(--white);
   height: 60px;
   width: 150px;
@@ -703,8 +734,8 @@ footer {
 
 .footer-donate-other a:hover {
   background-color: var(--white);
-  border: 1.5px solid var(--purple);
-  color: var(--purple);
+  border: 1.5px solid var(--green);
+  color: var(--green);
 }
 
 .footer-copyright {
@@ -721,7 +752,7 @@ footer {
 }
 
 .important-links li:hover {
-  color: var(--purple);
+  color: var(--green);
 }
 
 .footer-social-icons {
@@ -817,7 +848,7 @@ footer {
   }
 }
 
-/* 768px breakpoint */
+/* 940px breakpoint */
 @media (max-width: 768px) {
   .container {
     padding: 0 3rem;

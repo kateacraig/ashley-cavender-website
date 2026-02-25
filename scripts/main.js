@@ -28,47 +28,40 @@ document.addEventListener("DOMContentLoaded", function () {
 // Desktop/Tablet/Mobile Countdown Clock
 // ==========================================
 function updateCountdown() {
-  const targetDate = new Date("2026-08-06T00:00:00-04:00");
+  const targetDate = new Date("2026-08-06T05:00:00Z");
   const now = new Date();
   const diff = targetDate - now;
 
   if (diff <= 0) {
-    document.getElementById("weeks").textContent = "00";
-    document.getElementById("days").textContent = "00";
-    document.getElementById("hours").textContent = "00";
-    document.getElementById("seconds").textContent = "00";
-    document.getElementById("weeks-mobile").textContent = "00";
-    document.getElementById("days-mobile").textContent = "00";
-    document.getElementById("hours-mobile").textContent = "00";
-    document.getElementById("seconds-mobile").textContent = "00";
+    ["days", "hours", "minutes", "seconds"].forEach((id) => {
+      document.getElementById(id).textContent = "00";
+      document.getElementById(`${id}-mobile`).textContent = "00";
+    });
     return;
   }
 
-  // Build from smallest unit up
   const totalSeconds = Math.floor(diff / 1000);
   const totalMinutes = Math.floor(totalSeconds / 60);
   const totalHours = Math.floor(totalMinutes / 60);
   const totalDays = Math.floor(totalHours / 24);
-  const totalWeeks = Math.floor(totalDays / 7);
 
-  // Each unit is the remainder after the larger unit is removed
-  const weeks = totalWeeks;
-  const days = totalDays % 7;
+  const days = totalDays;
   const hours = totalHours % 24;
+  const minutes = totalMinutes % 60;
   const seconds = totalSeconds % 60;
 
   const pad = (n) => String(n).padStart(2, "0");
 
-  // Update desktop clock
-  document.getElementById("weeks").textContent = pad(weeks);
+  // Update desktop
   document.getElementById("days").textContent = pad(days);
   document.getElementById("hours").textContent = pad(hours);
+  document.getElementById("minutes").textContent = pad(minutes);
   document.getElementById("seconds").textContent = pad(seconds);
 
-  // Update mobile clock
-  document.getElementById("weeks-mobile").textContent = pad(weeks);
+  // Update mobile
   document.getElementById("days-mobile").textContent = pad(days);
   document.getElementById("hours-mobile").textContent = pad(hours);
+  document.getElementById("minutes-mobile").textContent = pad(minutes);
   document.getElementById("seconds-mobile").textContent = pad(seconds);
 }
 
