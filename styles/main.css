@@ -396,7 +396,7 @@ nav {
 }
 
 .hero-name h2 {
-  font-family: "Boogaloo";
+  font-family: "Unica One", sans-serif;
   font-size: 35px;
   text-align: right;
   margin: 0;
@@ -427,6 +427,7 @@ nav {
 .countdown-container h2 {
   font-size: 34px;
   text-align: center;
+  font-family: "Unica One", sans-serif;
   margin-bottom: -2rem;
   text-shadow: -0.25px -0.25px 0 var(--white), 0.25px -0.25px 0 var(--white),
     -0.25px 0.25px 0 var(--white), 0.25px 0.25px 0 var(--white);
@@ -611,13 +612,14 @@ nav {
 }
 
 .about-ashley-grid-item h3 {
-  font-family: "Boogaloo";
+  font-family: "Noto Sans", sans-serif;
   font-size: 46px;
 }
 
 .about-ashley-grid-item p {
   font-size: 18px;
   line-height: 1.5;
+  font-family: "Noto Sans", sans-serif;
 }
 
 /* About CTA */
