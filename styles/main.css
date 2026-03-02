@@ -173,7 +173,7 @@ p {
 .btn-donate {
   background-color: var(--primary-color);
   color: var(--white);
-  height: 60px;
+  height: 50px;
   width: 130px;
   border-radius: 30px;
   border: 1.5px solid var(--white);
@@ -195,8 +195,8 @@ p {
 .btn-donate-footer {
   background-color: var(--primary-color);
   color: var(--white);
-  height: 60px;
-  width: 150px;
+  height: 50px;
+  width: 140px;
   padding: 0 20px;
   border-radius: 30px;
   border: 1.5px solid var(--white);
@@ -712,7 +712,7 @@ footer h3 {
 .footer-donate-other a {
   background-color: var(--primary-color);
   color: var(--white);
-  height: 60px;
+  height: 50px;
   width: 150px;
   padding: 0 20px;
   border-radius: 30px;
