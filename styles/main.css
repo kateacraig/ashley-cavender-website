@@ -37,16 +37,14 @@
   /* Brand Colors */
   --white: #ffffff;
   --black: #000000;
-  --dark-gray: #121412;
-  --light-gray: #bcbcbc;
-  --green: #6faf7b;
-  --purple: #585379;
-  --peach: #c65d3b;
-  --yellow: #c48a2d;
+  --primary-color: #6faf7b;
+  --secondary-color: #585379;
+  --third-color: #c65d3b;
+  --fourth-color: #c48a2d;
 
   /* Typography */
-  --font-heading: "Playfair Display", serif;
-  --font-body: "Montserrat", sans-serif;
+  --font-heading: "Knewave", system-ui;
+  --font-body: "Noto Sans", sans-serif;
 
   /* Transitions */
   --transition: all 150ms ease-in-out;
@@ -84,7 +82,6 @@
 }
 
 body {
-  font-family: var(--font-body);
   color: var(--white);
   line-height: 1.6;
   background-color: var(--black);
@@ -118,6 +115,10 @@ h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
+}
+
+p {
+  font-family: var(--font-body);
 }
 
 h1 {
@@ -168,46 +169,9 @@ p {
   margin-top: 4rem;
 }
 
-.border {
-  border: var(--border);
-  margin: 0 50px;
-}
-
-.blue-border {
-  border: 5px solid var(--light-blue);
-  padding: 20px;
-}
-
-.blue-project-border {
-  border: 5px solid var(--light-blue);
-}
-
 /* Buttons */
-.btn {
-  background-color: var(--white);
-  color: var(--light-blue);
-  padding: 0.8rem 1.3rem;
-  width: 300px;
-  border-radius: var(--radius-md);
-  border: 1.5px solid var(--light-blue);
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  display: inline-block;
-  text-align: center;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  margin-top: 2rem;
-}
-
-.btn:hover {
-  background-color: var(--light-blue);
-  border: 1.5px solid var(--white);
-  color: var(--white);
-}
-
 .btn-donate {
-  background-color: var(--green);
+  background-color: var(--primary-color);
   color: var(--white);
   height: 60px;
   width: 130px;
@@ -224,12 +188,12 @@ p {
 
 .btn-donate:hover {
   background-color: var(--white);
-  border: 1.5px solid var(--green);
+  border: 1.5px solid var(--primary-color);
   color: var(--white);
 }
 
 .btn-donate-footer {
-  background-color: var(--green);
+  background-color: var(--primary-color);
   color: var(--white);
   height: 60px;
   width: 150px;
@@ -249,8 +213,8 @@ p {
 
 .btn-donate-footer:hover {
   background-color: var(--white);
-  border: 1.5px solid var(--green);
-  color: var(--green);
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .nav-menu > li > a.btn-donate {
@@ -311,19 +275,19 @@ nav {
 
 .nav-menu > li > a {
   color: var(--white);
-  text-shadow: -0.5px -0.5px 0 var(--light-blue),
-    0.5px -0.5px 0 var(--light-blue), -0.5px 0.5px 0 var(--light-blue),
-    0.5px 0.5px 0 var(--light-blue);
+  text-shadow: -0.5px -0.5px 0 var(--primary-color),
+    0.5px -0.5px 0 var(--primary-color), -0.5px 0.5px 0 var(--primary-color),
+    0.5px 0.5px 0 var(--primary-color);
   font-weight: 500;
   padding: 0.5rem 0.8rem;
-  font-family: "Boogaloo";
+  font-family: var(--font-body);
   display: block;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
 }
 
 .nav-menu > li > a:hover {
-  color: var(--green);
-  font-weight: 700;
+  color: var(--primary-color);
+  font-weight: 500;
   text-shadow: -0.6px -0.6px 0 var(--white), 0.6px -0.6px 0 var(--white),
     -0.6px 0.6px 0 var(--white), 0.6px 0.6px 0 var(--white);
 }
@@ -381,14 +345,14 @@ nav {
 }
 
 .hero h1 {
-  font-family: "Knewave", system-ui;
+  font-family: var(--font-heading);
   font-weight: 500;
   font-size: 160px;
   text-align: right;
   line-height: 1.2;
   margin-top: 40px;
-  text-shadow: -1px -1px 0 var(--peach), 1px -1px 0 var(--peach),
-    -1px 1px 0 var(--peach), 1px 1px 0 var(--peach);
+  text-shadow: -1px -1px 0 var(--third-color), 1px -1px 0 var(--third-color),
+    -1px 1px 0 var(--third-color), 1px 1px 0 var(--third-color);
 }
 
 .hero-last-name {
@@ -396,14 +360,15 @@ nav {
 }
 
 .hero-name h2 {
-  font-family: "Unica One", sans-serif;
-  font-size: 35px;
+  font-family: var(--font-body);
+  font-size: 30px;
   text-align: right;
   margin: 0;
   padding: 0;
   margin-top: -1rem;
-  text-shadow: -0.5px -0.5px 0 var(--peach), 0.5px -0.5px 0 var(--peach),
-    -0.5px 0.5px 0 var(--peach), 0.5px 0.5px 0 var(--peach);
+  text-shadow: -0.5px -0.5px 0 var(--third-color),
+    0.5px -0.5px 0 var(--third-color), -0.5px 0.5px 0 var(--third-color),
+    0.5px 0.5px 0 var(--third-color);
 }
 
 .hero-oak-leaf {
@@ -425,9 +390,10 @@ nav {
 }
 
 .countdown-container h2 {
-  font-size: 34px;
+  font-size: 30px;
   text-align: center;
-  font-family: "Unica One", sans-serif;
+  color: var(--fourth-color);
+  font-family: var(--font-body);
   margin-bottom: -2rem;
   text-shadow: -0.25px -0.25px 0 var(--white), 0.25px -0.25px 0 var(--white),
     -0.25px 0.25px 0 var(--white), 0.25px 0.25px 0 var(--white);
@@ -454,23 +420,24 @@ nav {
   align-items: center;
   justify-content: center;
   background-color: var(--white);
-  border: 3px solid var(--purple);
+  border: 3px solid var(--secondary-color);
   border-radius: 12px;
   padding: 20px 10px;
   gap: 10px;
 }
 
 .countdown-number {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 3.5rem;
-  color: var(--purple);
+  color: var(--secondary-color);
   line-height: 1;
+  font-weight: 600;
 }
 
 .countdown-label {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 1rem;
-  color: var(--purple);
+  color: var(--secondary-color);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -478,15 +445,20 @@ nav {
 /* Slogan Section */
 
 .slogan-section {
-  margin-top: 2rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url(../images/downtown-jonesborough.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .slogan h2 {
-  font-family: "Boogaloo";
-  font-size: 70px;
+  font-family: var(--font-heading);
+  font-size: 50px;
   margin-top: 8rem;
   margin-bottom: -2rem;
-  font-weight: normal;
+  font-weight: 300;
+  text-shadow: -0.25px -0.25px 0 var(--black), 0.25px -0.25px 0 var(--black),
+    -0.25px 0.25px 0 var(--black), 0.25px 0.25px 0 var(--black);
 }
 
 .slogan-grid {
@@ -497,10 +469,23 @@ nav {
 
 .slogan-grid-item h3 {
   margin-bottom: 3rem;
+  font-family: var(--font-body);
+}
+
+.slogan-grid-item-yellow {
+  color: var(--white);
+  text-shadow: -0.25px -0.25px 0 var(--black), 0.25px -0.25px 0 var(--black),
+    -0.25px 0.25px 0 var(--black), 0.25px 0.25px 0 var(--black);
+}
+
+.slogan-grid-item-purple {
+  color: var(--white);
+  text-shadow: -0.25px -0.25px 0 var(--black), 0.25px -0.25px 0 var(--black),
+    -0.25px 0.25px 0 var(--black), 0.25px 0.25px 0 var(--black);
 }
 
 .btn-donate-slogan {
-  background-color: var(--purple);
+  background-color: var(--secondary-color);
   color: var(--white);
   height: 60px;
   width: 300px;
@@ -518,12 +503,12 @@ nav {
 
 .btn-donate-slogan:hover {
   background-color: var(--white);
-  border: 1.5px solid var(--purple);
-  color: var(--purple);
+  border: 1.5px solid var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .btn-volunteer-slogan {
-  background-color: var(--yellow);
+  background-color: var(--fourth-color);
   color: var(--white);
   height: 60px;
   width: 300px;
@@ -541,39 +526,43 @@ nav {
 
 .btn-volunteer-slogan:hover {
   background-color: var(--white);
-  border: 1.5px solid var(--yellow);
-  color: var(--yellow);
+  border: 1.5px solid var(--fourth-color);
+  color: var(--fourth-color);
 }
 
 .slogan-ashley-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 2rem;
-  margin-top: -4rem;
-}
-
-.slogan-ashley-grid-item {
-  display: flex;
-  align-items: center;
 }
 
 .slogan-ashley-grid-item img {
-  width: 300px;
-  height: auto;
+  width: auto;
+  height: 320px;
   border-radius: 220px;
   display: block;
   margin: 0 auto;
-  border: 2px solid var(--green);
+  border: 2px solid var(--primary-color);
   margin-bottom: 4rem;
 }
 
 .slogan-ashley-grid-item h3 {
-  font-family: "Boogaloo";
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  font-size: 40px;
+  font-family: var(--font-body);
+  font-size: 30px;
   line-height: 1.2;
+  text-shadow: -0.25px -0.25px 0 var(--black), 0.25px -0.25px 0 var(--black),
+    -0.25px 0.25px 0 var(--black), 0.25px 0.25px 0 var(--black);
+}
+
+.slogan-ashley-grid-item h4 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-top: 2rem;
+  text-align: right;
+  font-weight: 300;
+  color: var(--primary-color);
+  text-shadow: -0.25px -0.25px 0 var(--black), 0.25px -0.25px 0 var(--black),
+    -0.25px 0.25px 0 var(--black), 0.25px 0.25px 0 var(--black);
 }
 
 /* ==========================================
@@ -589,12 +578,12 @@ nav {
 }
 
 .about-header h1 {
-  font-family: "Knewave", system-ui;
+  font-family: var(--font-heading);
   font-size: 82px;
   text-align: center;
   font-weight: 400;
-  text-shadow: -1px -1px 0 var(--peach), 1px -1px 0 var(--peach),
-    -1px 1px 0 var(--peach), 1px 1px 0 var(--peach);
+  text-shadow: -1px -1px 0 var(--third-color), 1px -1px 0 var(--third-color),
+    -1px 1px 0 var(--third-color), 1px 1px 0 var(--third-color);
 }
 
 /* About Body */
@@ -612,14 +601,18 @@ nav {
 }
 
 .about-ashley-grid-item h3 {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 46px;
+  font-size: 36px;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  text-shadow: -0.5px -0.5px 0 var(--third-color),
+    0.5px -0.5px 0 var(--third-color), -0.5px 0.5px 0 var(--third-color),
+    0.5px 0.5px 0 var(--third-color);
 }
 
 .about-ashley-grid-item p {
   font-size: 18px;
   line-height: 1.5;
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--font-body);
 }
 
 /* About CTA */
@@ -667,11 +660,6 @@ nav {
 /* ==========================================
    Footer
    ========================================== */
-footer {
-  margin-top: 4rem;
-  border-top: 2px solid var(--white);
-}
-
 /* Footer Grid */
 .footer-grid {
   display: grid;
@@ -682,6 +670,11 @@ footer {
 
 .footer-mobile-links-grid {
   display: none;
+}
+
+footer h3 {
+  font-weight: 300;
+  color: var(--primary-color);
 }
 
 /* Footer Logo */
@@ -709,14 +702,15 @@ footer {
 
 .footer-follow-ashley h4 {
   font-size: 1.3rem;
+  font-family: var(--font-body);
 }
 
 .footer-follow-ashley a:hover {
-  color: var(--purple);
+  color: var(--primary-color);
 }
 
 .footer-donate-other a {
-  background-color: var(--green);
+  background-color: var(--primary-color);
   color: var(--white);
   height: 60px;
   width: 150px;
@@ -736,8 +730,8 @@ footer {
 
 .footer-donate-other a:hover {
   background-color: var(--white);
-  border: 1.5px solid var(--green);
-  color: var(--green);
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .footer-copyright {
@@ -750,11 +744,11 @@ footer {
   padding: 0;
   font-size: 1.5rem;
   line-height: 1.5;
-  font-family: "Boogaloo";
+  font-family: var(--font-body);
 }
 
 .important-links li:hover {
-  color: var(--green);
+  color: var(--primary-color);
 }
 
 .footer-social-icons {
@@ -768,7 +762,7 @@ footer {
 }
 
 .footer-social-icon:hover {
-  color: var(--purple);
+  color: var(--primary-color);
 }
 
 /* 1024px breakpoint */
