@@ -37,7 +37,7 @@
   /* Brand Colors */
   --white: #ffffff;
   --black: #000000;
-  --primary-color: #6faf7b;
+  --primary-color: hsl(131, 29%, 56%);
   --secondary-color: #585379;
   --third-color: #c65d3b;
   --fourth-color: #c48a2d;
@@ -749,6 +749,120 @@ nav {
 
 .candidate-carousel .carousel-placeholder-text {
   display: none;
+}
+
+/* ==========================================
+   Contact Page
+   ========================================== */
+.ashley-contact {
+  background-image: linear-gradient(
+      rgba(194, 191, 191, 0.6),
+      rgba(103, 103, 112, 0.4),
+      rgba(8, 8, 45, 0.4),
+      rgba(1, 1, 22, 0.4)
+    ),
+    url(../images/ashley-friends.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.ashley-contact-header h2 {
+  letter-spacing: 3px;
+  text-shadow: -0.25px -0.25px 0 var(--white), 0.25px -0.25px 0 var(--white),
+    -0.25px 0.25px 0 var(--white), 0.25px 0.25px 0 var(--white);
+}
+
+.ashley-contact-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  grid-gap: 2rem;
+}
+
+.ashley-contact-grid-item-text {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px;
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  box-shadow: var(--image-shadow);
+}
+
+.ashley-contact-grid-item {
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ashley-contact-grid-item-text h2 {
+  margin-bottom: 2rem;
+}
+
+.ashley-contact-grid-item-text li {
+  font-size: 26px;
+  list-style: none;
+  line-height: 1.2;
+  padding: 0.6rem 0;
+}
+
+.ashley-contact-grid-item-text h3 {
+  font-family: var(--font-body);
+  font-size: 30px;
+  text-shadow: -0.1px -0.1px 0 var(--white), 0.1px -0.1px 0 var(--white),
+    -0.1px 0.1px 0 var(--white), 0.1px 0.1px 0 var(--white);
+}
+
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px;
+  border: 3px solid var(--secondary-color);
+  border-radius: 20px;
+  box-shadow: var(--image-shadow);
+}
+
+.contact-form h2 {
+  text-align: center;
+}
+
+.form-name-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.form-name {
+  padding: 10px 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-email {
+  padding: 10px 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 340px;
+  margin-top: 1rem;
+}
+
+.form-district {
+  padding: 10px 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 340px;
+  margin-top: 1rem;
+}
+
+.form-message {
+  padding: 10px 5px 90px 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 340px;
+  margin-top: 1rem;
+}
+
+.form-submit {
+  padding: 5px 5px;
+  background-color: var(--primary-color);
+  width: 340px;
+  margin-top: 1rem;
+  font-size: 20px;
+  font-family: var(--font-body);
 }
 
 /* ==========================================
