@@ -28,6 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // Desktop/Tablet/Mobile Countdown Clock
 // ==========================================
 function updateCountdown() {
+  const daysEl = document.getElementById("days");
+
+  // Only run on pages that have the countdown clock
+  if (!daysEl) return;
+
   const targetDate = new Date("2026-08-06T05:00:00Z");
   const now = new Date();
   const diff = targetDate - now;
@@ -52,13 +57,11 @@ function updateCountdown() {
 
   const pad = (n) => String(n).padStart(2, "0");
 
-  // Update desktop
   document.getElementById("days").textContent = pad(days);
   document.getElementById("hours").textContent = pad(hours);
   document.getElementById("minutes").textContent = pad(minutes);
   document.getElementById("seconds").textContent = pad(seconds);
 
-  // Update mobile
   document.getElementById("days-mobile").textContent = pad(days);
   document.getElementById("hours-mobile").textContent = pad(hours);
   document.getElementById("minutes-mobile").textContent = pad(minutes);
@@ -67,3 +70,103 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+// ==========================================
+// Candidate Carousel
+// ==========================================
+const candidateCarousel = document.querySelector(".candidate-carousel");
+const candidateCarouselSlides = document.getElementById(
+  "candidateCarouselSlides"
+);
+const candidateSlides = candidateCarousel
+  ? candidateCarousel.querySelectorAll(".carousel-slide")
+  : [];
+
+if (
+  candidateCarousel &&
+  candidateCarouselSlides &&
+  candidateSlides.length > 0
+) {
+  let candidateCurrentIndex = 0;
+  let candidateSlidesToShow = getCandidateSlidesToShow();
+  let candidateIsTransitioning = false;
+  let candidateAutoAdvanceInterval;
+
+  function setupCandidateInfiniteLoop() {
+    const existingClones = candidateCarouselSlides.querySelectorAll(".clone");
+    existingClones.forEach((clone) => clone.remove());
+
+    for (let i = 0; i < candidateSlidesToShow; i++) {
+      const clone = candidateSlides[i].cloneNode(true);
+      clone.classList.add("clone");
+      candidateCarouselSlides.appendChild(clone);
+    }
+
+    for (
+      let i = candidateSlides.length - candidateSlidesToShow;
+      i < candidateSlides.length;
+      i++
+    ) {
+      const clone = candidateSlides[i].cloneNode(true);
+      clone.classList.add("clone");
+      candidateCarouselSlides.insertBefore(
+        clone,
+        candidateCarouselSlides.firstChild
+      );
+    }
+
+    candidateCurrentIndex = candidateSlidesToShow;
+    updateCandidateCarouselPosition(false);
+  }
+
+  function getCandidateSlidesToShow() {
+    return window.innerWidth <= 460 ? 1 : 4;
+  }
+
+  function updateCandidateCarouselPosition(animate = true) {
+    const slideWidth = 100 / candidateSlidesToShow;
+    const offset = -candidateCurrentIndex * slideWidth;
+
+    if (animate) {
+      candidateCarouselSlides.style.transition = "transform 1s ease-in-out";
+    } else {
+      candidateCarouselSlides.style.transition = "none";
+    }
+
+    candidateCarouselSlides.style.transform = `translateX(${offset}%)`;
+  }
+
+  function candidateNextSlide() {
+    if (candidateIsTransitioning) return;
+
+    candidateIsTransitioning = true;
+    candidateCurrentIndex++;
+    updateCandidateCarouselPosition(true);
+
+    setTimeout(() => {
+      if (
+        candidateCurrentIndex >=
+        candidateSlides.length + candidateSlidesToShow
+      ) {
+        candidateCurrentIndex = candidateSlidesToShow;
+        updateCandidateCarouselPosition(false);
+      }
+      candidateIsTransitioning = false;
+    }, 1000);
+  }
+
+  let candidateResizeTimeout;
+  window.addEventListener("resize", function () {
+    clearTimeout(candidateResizeTimeout);
+    candidateResizeTimeout = setTimeout(() => {
+      const newSlidesToShow = getCandidateSlidesToShow();
+      if (newSlidesToShow !== candidateSlidesToShow) {
+        candidateSlidesToShow = newSlidesToShow;
+        setupCandidateInfiniteLoop();
+      }
+    }, 250);
+  });
+
+  setupCandidateInfiniteLoop();
+  candidateAutoAdvanceInterval = setInterval(candidateNextSlide, 2000);
+}

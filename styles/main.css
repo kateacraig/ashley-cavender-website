@@ -641,17 +641,18 @@ nav {
 }
 
 /* About Body */
-
 .about-ashley-grid {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
   grid-gap: 2rem;
   margin-top: -2rem;
 }
 
 .about-ashley-photos img {
-  width: 255px;
+  width: 430px;
   height: auto;
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
 }
 
 .about-ashley-grid-item h3 {
@@ -669,46 +670,85 @@ nav {
   font-family: var(--font-body);
 }
 
-/* About CTA */
-
-.about-page-cta-grid {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 2rem;
-  margin-top: -6rem;
-}
-
-.about-page-cta-grid-item {
-  display: flex;
-  align-items: center;
-}
-
-.about-page-cta-grid-item h3 {
-  font-family: "Boogaloo";
-  font-size: 40px;
-}
-
-.btn-about-cta {
-  background-color: var(--purple);
+/* Carousel Container */
+.candidate-header h2 {
   color: var(--white);
-  height: 60px;
-  width: 300px;
-  border-radius: 30px;
-  border: 1.5px solid var(--white);
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
+  text-shadow: -1.5px -1.5px 0 var(--black), 1.5px -1.5px 0 var(--black),
+    -1.5px 1.5px 0 var(--black), 1.5px 1.5px 0 var(--black);
+  font-size: 46px;
+  letter-spacing: 2px;
 }
 
-.btn-about-cta:hover {
-  background-color: var(--white);
-  border: 1.5px solid var(--purple);
-  color: var(--purple);
+.candidate-slider {
+  background-image: linear-gradient(
+      rgba(194, 191, 191, 0.6),
+      rgba(26, 26, 47, 0.4),
+      rgba(8, 8, 45, 0.4),
+      rgba(1, 1, 22, 0.4)
+    ),
+    url(../images/carousel-background-jonesborough.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 2rem;
+  border: 5px solid var(--primary-color);
+  border-radius: 15px;
+}
+
+.candidate-carousel {
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+/* Carousel Slides Wrapper */
+.carousel-slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  will-change: transform;
+}
+
+/* Base slide */
+.carousel-slide {
+  flex: 0 0 25%;
+  min-width: 25%;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* Candidate slide — 4 per view = 25% each */
+.carousel-candidate-slide {
+  flex: 0 0 25%;
+  min-width: 25%;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* Placeholder */
+.carousel-placeholder {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-placeholder-icon {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.carousel-placeholder-icon img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.candidate-carousel .carousel-placeholder-text {
+  display: none;
 }
 
 /* ==========================================
@@ -835,19 +875,7 @@ footer h3 {
     padding: 0 4rem;
   }
 
-  .countdown-grid {
-    max-width: 500px;
-    gap: 20px;
-  }
-
-  .countdown-number {
-    font-size: 3rem;
-  }
-
-  .countdown-box {
-    padding: 32px 16px;
-  }
-
+  /* Nav/Header Adjustments */
   .header-content {
     flex-wrap: wrap;
     align-items: flex-start;
@@ -896,6 +924,7 @@ footer h3 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
+  /* btn Adjustments */
   .btn-donate {
     width: 40px;
     padding: 0;
@@ -903,8 +932,24 @@ footer h3 {
     align-items: center;
   }
 
-  .slogan-ashley-grid-item h3 {
-    margin-top: -2rem;
+  /* Countdown Adjustments */
+  .countdown-grid {
+    max-width: 500px;
+    gap: 20px;
+  }
+
+  .countdown-number {
+    font-size: 3rem;
+  }
+
+  .countdown-box {
+    padding: 32px 16px;
+  }
+
+  /* Carousel adjustments */
+  .carousel-slide {
+    flex: 0 0 25%;
+    min-width: 25%;
   }
 }
 
@@ -914,6 +959,7 @@ footer h3 {
     padding: 0 3rem;
   }
 
+  /* Countdown Adjustments */
   .countdown-grid {
     max-width: 420px;
     gap: 16px;
@@ -938,6 +984,7 @@ footer h3 {
     padding: 0 2rem;
   }
 
+  /* Hero Adjustments */
   .hero-grid {
     grid-template-columns: 1fr;
   }
@@ -976,6 +1023,7 @@ footer h3 {
     margin-left: -5px;
   }
 
+  /* Hero Countdown Adjustments */
   .countdown-container {
     width: 100%;
     text-align: left;
@@ -1009,6 +1057,13 @@ footer h3 {
     display: grid;
   }
 
+  /* Carousel Adjustments */
+  .carousel-candidate-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+
+  /* Footer Adjustments */
   footer {
     text-align: center;
   }
@@ -1065,6 +1120,22 @@ footer h3 {
 
   .btn-donate-slogan {
     margin-top: -1rem;
+  }
+
+  /* About Slider Adjustments */
+
+  .candidate-header h2 {
+    font-size: 55px;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+
+  /* Footer Adjustments */
+  .candidate-carousel .carousel-placeholder-icon {
+    aspect-ratio: 1 / 1;
   }
 
   .footer-follow-ashley {
