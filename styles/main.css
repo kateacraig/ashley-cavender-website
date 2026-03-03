@@ -169,6 +169,14 @@ p {
   margin-top: 4rem;
 }
 
+.bold {
+  font-weight: 900;
+}
+
+.green {
+  color: rgb(8, 107, 8);
+}
+
 /* Buttons */
 .btn-donate {
   background-color: var(--primary-color);
@@ -349,6 +357,7 @@ nav {
   font-weight: 500;
   font-size: 160px;
   text-align: right;
+  letter-spacing: 3px;
   line-height: 1.2;
   margin-top: 40px;
   text-shadow: -1px -1px 0 var(--third-color), 1px -1px 0 var(--third-color),
@@ -463,6 +472,7 @@ nav {
   font-weight: 300;
   margin: 0;
   padding: 0;
+  letter-spacing: 3px;
   margin-top: 3rem;
   text-shadow: -0.1px -0.1px 0 var(--white), 0.1px -0.1px 0 var(--white),
     -0.1px 0.1px 0 var(--white), 0.1px 0.1px 0 var(--white);
@@ -584,6 +594,7 @@ nav {
   text-align: right;
   padding: 0;
   margin: 0;
+  letter-spacing: 3px;
 }
 
 .slogan-ashley-grid-item img {
@@ -622,7 +633,6 @@ nav {
 /* ==========================================
    About Page
    ========================================== */
-
 /* About Header */
 .about-header {
   margin: 0;
@@ -636,6 +646,7 @@ nav {
   font-size: 82px;
   text-align: center;
   font-weight: 400;
+  letter-spacing: 3px;
   text-shadow: -1px -1px 0 var(--third-color), 1px -1px 0 var(--third-color),
     -1px 1px 0 var(--third-color), 1px 1px 0 var(--third-color);
 }
@@ -659,6 +670,7 @@ nav {
   font-size: 36px;
   font-family: var(--font-heading);
   font-weight: 400;
+  letter-spacing: 3px;
   text-shadow: -0.5px -0.5px 0 var(--third-color),
     0.5px -0.5px 0 var(--third-color), -0.5px 0.5px 0 var(--third-color),
     0.5px 0.5px 0 var(--third-color);
@@ -676,7 +688,7 @@ nav {
   text-shadow: -1.5px -1.5px 0 var(--black), 1.5px -1.5px 0 var(--black),
     -1.5px 1.5px 0 var(--black), 1.5px 1.5px 0 var(--black);
   font-size: 46px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .candidate-slider {
@@ -754,6 +766,7 @@ nav {
 /* ==========================================
    Contact Page
    ========================================== */
+/* Contact Ashley Background */
 .ashley-contact {
   background-image: linear-gradient(
       rgba(194, 191, 191, 0.6),
@@ -767,6 +780,7 @@ nav {
   padding: 100px 0;
 }
 
+/* Contact Ashley Text Box */
 .ashley-contact-header h2 {
   letter-spacing: 3px;
   text-shadow: -0.25px -0.25px 0 var(--white), 0.25px -0.25px 0 var(--white),
@@ -812,6 +826,7 @@ nav {
     -0.1px 0.1px 0 var(--white), 0.1px 0.1px 0 var(--white);
 }
 
+/* Contact Form */
 .contact-form {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 40px;
@@ -865,6 +880,124 @@ nav {
   font-family: var(--font-body);
 }
 
+/* Volunteer Section */
+.volunteer-for-ashley {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../images/downtown-jonesborough.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.volunteer-for-ashley h2 {
+  text-align: center;
+  letter-spacing: 3px;
+  color: var(--black);
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+  margin-bottom: 3rem;
+  font-size: 55px;
+}
+
+/* Ways to Help Grid */
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.volunteer-grid-item {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px 20px;
+  color: var(--black);
+  border-radius: 20px;
+  box-shadow: var(--image-shadow);
+}
+
+.volunteer-grid-item-green {
+  border: 3px solid var(--primary-color);
+}
+
+.volunteer-grid-item-purple {
+  border: 3px solid var(--secondary-color);
+}
+
+.volunteer-grid-item-yellow {
+  border: 3px solid var(--fourth-color);
+}
+
+.volunteer-grid-item h2 {
+  text-align: center;
+  letter-spacing: 3px;
+  text-shadow: -0.25px -0.25px 0 var(--white), 0.25px -0.25px 0 var(--white),
+    -0.25px 0.25px 0 var(--white), 0.25px 0.25px 0 var(--white);
+}
+.volunteer-grid-item h3 {
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: var(--font-body);
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 500;
+  margin-top: 2rem;
+  text-shadow: -0.1px -0.1px 0 var(--white), 0.1px -0.1px 0 var(--white),
+    -0.1px 0.1px 0 var(--white), 0.1px 0.1px 0 var(--white);
+}
+
+.btn-donate-contact {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  height: 60px;
+  width: 300px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  margin: 0 auto;
+  margin-top: 3rem;
+  box-shadow: var(--image-shadow);
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.btn-donate-contact:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.btn-volunteer-contact {
+  background-color: var(--fourth-color);
+  color: var(--white);
+  height: 60px;
+  width: 300px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  margin: 0 auto;
+  margin-top: 3rem;
+  box-shadow: var(--image-shadow);
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.btn-volunteer-contact:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--fourth-color);
+  color: var(--fourth-color);
+}
+
 /* ==========================================
    Footer
    ========================================== */
@@ -892,6 +1025,7 @@ footer {
 footer h3 {
   font-weight: 300;
   color: var(--primary-color);
+  letter-spacing: 3px;
 }
 
 /* Footer Logo */
