@@ -764,6 +764,102 @@ nav {
 }
 
 /* ==========================================
+   Issues Page
+   ========================================== */
+/* Issues */
+.issues-ashley {
+  text-align: center;
+}
+
+.issues-ashley h2 {
+  letter-spacing: 3px;
+  text-shadow: -0.5px -0.5px 0 var(--primary-color),
+    0.5px -0.5px 0 var(--primary-color), -0.5px 0.5px 0 var(--primary-color),
+    0.5px 0.5px 0 var(--primary-color);
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.issues-ashley h3 {
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   Events Page
+   ========================================== */
+/* Events Header */
+.events-ashley {
+  text-align: center;
+}
+
+.events-ashley h2 {
+  letter-spacing: 3px;
+  text-shadow: -0.5px -0.5px 0 var(--primary-color),
+    0.5px -0.5px 0 var(--primary-color), -0.5px 0.5px 0 var(--primary-color),
+    0.5px 0.5px 0 var(--primary-color);
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.events-ashley h3 {
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   Elections Page
+   ========================================== */
+/* Election Header */
+.election-ashley {
+  text-align: center;
+}
+
+.election-ashley h2 {
+  letter-spacing: 3px;
+  text-shadow: -0.5px -0.5px 0 var(--primary-color),
+    0.5px -0.5px 0 var(--primary-color), -0.5px 0.5px 0 var(--primary-color),
+    0.5px 0.5px 0 var(--primary-color);
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.election-ashley h3 {
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   News Page
+   ========================================== */
+/* News Header */
+.news-ashley {
+  text-align: center;
+}
+
+.news-ashley h2 {
+  letter-spacing: 3px;
+  text-shadow: -0.5px -0.5px 0 var(--primary-color),
+    0.5px -0.5px 0 var(--primary-color), -0.5px 0.5px 0 var(--primary-color),
+    0.5px 0.5px 0 var(--primary-color);
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.news-ashley h3 {
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ==========================================
    Contact Page
    ========================================== */
 /* Contact Ashley Background */
@@ -883,9 +979,8 @@ nav {
 /* Volunteer Section */
 .volunteer-for-ashley {
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.3),
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.7)
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.7)
     ),
     url(../images/downtown-jonesborough.jpg);
   background-repeat: no-repeat;
@@ -1311,6 +1406,147 @@ footer h3 {
     min-width: 100%;
   }
 
+  /* About Grid Adjustments */
+  .about-ashley {
+    padding: 100px 0 50px 0;
+  }
+
+  .about-ashley-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-ashley-photos img {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .about-ashley-grid-item h3 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .about-ashley-grid-item p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* Carousel adjustments */
+  .carousel-slide {
+    flex: 100%;
+    min-width: 100%;
+  }
+
+  /* About Slider Adjustments */
+  .candidate-slider {
+    padding: 60px 0 100px 0;
+  }
+
+  .carousel {
+    height: 100%;
+  }
+
+  .candidate-header h2 {
+    font-size: 50px;
+  }
+
+  .carousel-placeholder-icon img {
+    height: 360px;
+    display: block;
+  }
+
+  .candidate-carousel .carousel-placeholder-icon {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Contact Page Adjustments */
+  .ashley-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ashley-contact-grid-item-text {
+    max-width: 365px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .ashley-contact-grid-item-text h2 {
+    font-size: 44px;
+  }
+
+  .ashley-contact-grid-item-text h3 {
+    font-size: 25px;
+  }
+
+  .ashley-contact-grid-item-form {
+    max-width: 365px;
+    justify-content: center;
+  }
+
+  .contact-form {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 20px;
+    box-shadow: var(--image-shadow);
+  }
+
+  .contact-form h2 {
+    margin-bottom: 2rem;
+  }
+
+  .form-name-grid {
+    grid-gap: 1rem;
+  }
+
+  .form-name {
+    padding: 10px 0px 10px 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .form-email {
+    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 320px;
+    margin-top: 1rem;
+  }
+
+  .form-district {
+    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 320px;
+    margin-top: 1rem;
+  }
+
+  .form-message {
+    padding: 10px 5px 90px 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 320px;
+    margin-top: 1rem;
+  }
+
+  .form-submit {
+    padding: 5px 5px;
+    background-color: var(--primary-color);
+    width: 320px;
+    margin-top: 1rem;
+    font-size: 20px;
+    font-family: var(--font-body);
+  }
+
+  .volunteer-for-ashley {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url(../images/downtown-jonesborough.jpg);
+  }
+
+  .volunteer-grid {
+    grid-template-columns: 1fr;
+  }
+
   /* Footer Adjustments */
   footer {
     text-align: center;
@@ -1370,22 +1606,7 @@ footer h3 {
     margin-top: -1rem;
   }
 
-  /* About Slider Adjustments */
-
-  .candidate-header h2 {
-    font-size: 55px;
-  }
-
-  .carousel-slide {
-    flex: 0 0 100%;
-    min-width: 100%;
-  }
-
   /* Footer Adjustments */
-  .candidate-carousel .carousel-placeholder-icon {
-    aspect-ratio: 1 / 1;
-  }
-
   .footer-follow-ashley {
     display: none;
   }
@@ -1394,13 +1615,23 @@ footer h3 {
     display: grid;
   }
 
+  .footer-follow-ashley-mobile h3 {
+    letter-spacing: 3px;
+  }
+
   .footer-follow-ashley-mobile h4 {
     font-size: 1.3rem;
+    font-family: var(--font-body);
+    font-weight: 400;
   }
 
   .footer-social-icons {
     display: flex;
     justify-content: center;
+  }
+
+  .footer-donate p {
+    font-size: 18px;
   }
 
   .footer-logo img {
