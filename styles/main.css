@@ -38,9 +38,9 @@
   --white: #ffffff;
   --black: #000000;
   --primary-color: rgba(111, 175, 123);
-  --secondary-color: #585379;
-  --third-color: #c65d3b;
-  --fourth-color: #c48a2d;
+  --secondary-color: rgba(62, 89, 116);
+  --third-color: rgba(179, 85, 58);
+  --fourth-color: rgba(217, 183, 108);
 
   /* Typography */
   --font-heading: "Knewave", system-ui;
@@ -767,18 +767,36 @@ nav {
    Issues Page
    ========================================== */
 /* Issues */
+.issues-ashley {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.6),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../images/issues-page-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.issues-ashley-text-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  margin-top: -2rem;
+}
+
 .issues-header-grid {
   display: grid;
   grid-template-columns: 0.5fr 2fr;
   grid-gap: 2.5rem;
-  margin-top: -2rem;
 }
 
 .issues-ashley h2 {
   letter-spacing: 3px;
   text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
     -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 500;
   color: var(--primary-color);
   letter-spacing: 3px;
@@ -793,14 +811,14 @@ nav {
 
 .small-text {
   font-size: 12px;
-  color: var(--fourth-color);
+  color: var(--primary-color);
 }
 
 .issues-ashley h3 {
   letter-spacing: 3px;
   text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
     -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 500;
   margin-bottom: 10px;
   color: var(--primary-color);
@@ -810,6 +828,7 @@ nav {
 .issues-header-grid-item-links a {
   font-family: var(--font-body);
   line-height: 1;
+  font-weight: 700;
 }
 
 .issues-header-grid-item-links a:hover {
@@ -825,16 +844,16 @@ nav {
 }
 
 .issue-box-grid-item {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(62, 89, 116, 0.6);
   padding: 20px;
   border: 3px solid var(--primary-color);
   border-radius: 20px;
   text-align: center;
-  height: 360px;
+  height: 370px;
 }
 
 .issue-box-grid-item h4 {
-  font-size: 26px;
+  font-size: 30px;
   background-color: var(--primary-color);
   width: 50px;
   height: 50px;
@@ -846,7 +865,7 @@ nav {
 }
 
 .issue-text {
-  max-height: 320px;
+  height: 200px;
 }
 
 .issue-box-grid-item h3 {
@@ -870,6 +889,14 @@ nav {
   background-color: var(--primary-color);
   margin-top: 2rem;
   border-radius: 20px;
+  border: 1px solid var(--white);
+}
+
+.issue-box-grid-item a:hover {
+  color: var(--primary-color);
+  background-color: var(--white);
+  font-weight: 700;
+  border: 1px solid var(--primary-color);
 }
 
 /* ==========================================
