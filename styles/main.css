@@ -900,6 +900,27 @@ nav {
 }
 
 /* ==========================================
+   Individual Issues Pages
+   ========================================== */
+/* Quote Format */
+.issues-quote p {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--fourth-color);
+  text-shadow: -0.25px -0.25px 0 var(--black), 0.25px -0.25px 0 var(--black),
+    -0.25px 0.25px 0 var(--black), 0.25px 0.25px 0 var(--black);
+  margin-top: 2rem;
+  font-weight: 400;
+}
+
+.if-elected p {
+  color: var(--fourth-color);
+  font-weight: 600;
+  text-shadow: -0.25px -0.25px 0 var(--black), 0.25px -0.25px 0 var(--black),
+    -0.25px 0.25px 0 var(--black), 0.25px 0.25px 0 var(--black);
+}
+
+/* ==========================================
    Events Page
    ========================================== */
 /* Events Header */
