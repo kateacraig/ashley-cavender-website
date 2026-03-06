@@ -921,6 +921,10 @@ nav {
     -0.25px 0.25px 0 var(--black), 0.25px 0.25px 0 var(--black);
 }
 
+.issues-header-grid-item-mobile {
+  display: none;
+}
+
 /* ==========================================
    Events Page
    ========================================== */
@@ -1474,10 +1478,12 @@ footer h3 {
   }
 
   .hero h1 {
-    font-family: "Boogaloo";
+    font-family: var(--font-heading);
     font-size: 100px;
     text-align: right;
     margin-top: 0;
+    font-size: 80px;
+    line-height: 1.4;
   }
 
   .hero-last-name {
@@ -1485,12 +1491,12 @@ footer h3 {
   }
 
   .hero-name h2 {
-    font-family: "Boogaloo";
-    font-size: 20px;
+    font-family: var(--font-body);
+    font-size: 16px;
     text-align: right;
     margin: 0;
     padding: 0;
-    margin-top: -2rem;
+    margin-top: -1.3rem;
   }
 
   .hero-oak-leaf {
@@ -1498,6 +1504,10 @@ footer h3 {
     width: auto;
     margin-right: -5px;
     margin-left: -5px;
+  }
+
+  .slogan-grid-item h3 {
+    width: 300px;
   }
 
   /* Hero Countdown Adjustments */
@@ -1592,6 +1602,35 @@ footer h3 {
 
   .candidate-carousel .carousel-placeholder-icon {
     aspect-ratio: 1 / 1;
+  }
+
+  /* Issues Pages */
+  .issues-header-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .issues-header-grid-item-links {
+    display: none;
+  }
+
+  .issues-boxes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .issue-box-grid-item {
+    height: 420px;
+  }
+
+  .issue-text {
+    height: 240px;
+  }
+
+  .issues-header-grid-item-mobile {
+    display: inline-block;
+  }
+
+  .issues-ashley-text-box {
+    margin-top: -4rem;
   }
 
   /* Contact Page Adjustments */
