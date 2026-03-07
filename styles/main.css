@@ -1020,6 +1020,15 @@ nav {
   text-shadow: none;
 }
 
+.polling-location-text {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px;
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  box-shadow: var(--image-shadow);
+  margin-top: 2rem;
+}
+
 /* ==========================================
    News Page
    ========================================== */
