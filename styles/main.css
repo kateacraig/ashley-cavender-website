@@ -1020,6 +1020,21 @@ nav {
   text-shadow: none;
 }
 
+.how-to-vote-grid-item h4 {
+  color: var(--secondary-color);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.how-to-vote-grid-item p {
+  color: var(--black);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 18px;
+}
+
 .polling-location-text {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 40px;
