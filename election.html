@@ -20,6 +20,15 @@
       crossorigin="anonymous"
     ></script>
   </head>
+  <div class="modal-overlay" id="earlyVotingModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <img
+        src="images/early-voting-locations.png"
+        alt="Early Voting Locations"
+      />
+    </div>
+  </div>
   <body>
     <section class="background-image nav-header">
       <header>
@@ -52,7 +61,9 @@
       </header>
 
       <section class="about-header">
-        <h1>Election Information</h1>
+        <h1>
+          Election <span class="election-header-mobile">Information</span>
+        </h1>
       </section>
     </section>
 
@@ -67,21 +78,67 @@
           <div class="how-to-vote-grid">
             <div class="how-to-vote-grid-item">
               <h3>Absentee Vote</h3>
-              <h4 class="mt-1">May 5 Election</h4>
-              <p>February 4 - April 25, 2026</p>
-              <h4 class="mt-1">August 6 Election</h4>
-              <p>April 6 - July 27, 2026</p>
+              <div class="voting-info-text">
+                <h4 class="mt-1">May 5 Election</h4>
+                <p>February 4 - April 25, 2026</p>
+                <h4 class="mt-1">August 6 Election</h4>
+                <p>April 6 - July 27, 2026</p>
+                <div class="absentee-ballot-requirements">
+                  <p>
+                    Your absentee ballot <span class="bold">must</span> be
+                    returned by mail. It <span class="bold">cannot</span> be
+                    dropped off at the election commission, an early voting
+                    location, or your polling location.
+                  </p>
+                </div>
+              </div>
               <a
                 href="https://www.wcecoffice.com/absentee-info/"
                 target="_blank"
+                class="how-to-vote-grid-item-absentee-btn"
                 >Request Absentee Ballot</a
               >
             </div>
-            <div class="how-to-vote-grid-item">
+            <div class="how-to-vote-grid-item how-to-vote-grid-item-early">
               <h3>Early Vote</h3>
+              <div class="voting-info-text">
+                <h4 class="mt-1">May 5 Election</h4>
+                <p>April 15 - April 30, 2026</p>
+                <p>Monday - Friday 9 AM - 5 PM</p>
+                <p>Saturdays 9 AM - 12 Noon</p>
+                <h4 class="mt-1">August 6 Election</h4>
+                <p>July 17 - August 1, 2026</p>
+                <p>Monday - Friday 9 AM - 5 PM</p>
+                <p>Saturdays 9 AM - 12 Noon</p>
+              </div>
+              <a
+                href=""
+                target="_blank"
+                class="how-to-vote-grid-item-early-btn"
+                id="earlyVotingBtn"
+                >Early Voting Locations</a
+              >
             </div>
-            <div class="how-to-vote-grid-item">
+            <div class="how-to-vote-grid-item how-to-vote-grid-item-election">
               <h3>On Election Day</h3>
+              <div class="voting-info-text">
+                <h4 class="mt-1">May 5 Election</h4>
+                <p>Polls open 8 AM - 8 PM</p>
+                <h4 class="mt-1">August 6 Election</h4>
+                <p>Polls open 8 AM - 8 PM</p>
+                <div class="polling-location">
+                  <h4 class="mt-2">District 3 Polling Location</h4>
+                  <p>Old Jonesborough Middle School</p>
+                  <p>308 Forest Dr</p>
+                  <p>Jonesborough, TN 37659</p>
+                </div>
+              </div>
+              <a
+                href="https://tnmap.tn.gov/voterlookup/"
+                target="_blank"
+                class="how-to-vote-grid-item-early-btn"
+                >All Polling Locations</a
+              >
             </div>
           </div>
         </div>

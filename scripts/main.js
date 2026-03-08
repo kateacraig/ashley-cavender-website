@@ -170,3 +170,39 @@ if (
   setupCandidateInfiniteLoop();
   candidateAutoAdvanceInterval = setInterval(candidateNextSlide, 2000);
 }
+
+// ==========================================
+// Early Voting Modal
+// ==========================================
+const earlyVotingBtn = document.getElementById("earlyVotingBtn");
+const earlyVotingModal = document.getElementById("earlyVotingModal");
+const modalClose = document.getElementById("modalClose");
+
+if (earlyVotingBtn && earlyVotingModal) {
+  earlyVotingBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    earlyVotingModal.classList.add("active");
+    document.body.style.overflow = "hidden"; // prevents background scrolling
+  });
+
+  modalClose.addEventListener("click", function () {
+    earlyVotingModal.classList.remove("active");
+    document.body.style.overflow = "";
+  });
+
+  // Close when clicking outside the image
+  earlyVotingModal.addEventListener("click", function (e) {
+    if (e.target === earlyVotingModal) {
+      earlyVotingModal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Close with Escape key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && earlyVotingModal.classList.contains("active")) {
+      earlyVotingModal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+}
