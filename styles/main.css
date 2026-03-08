@@ -1110,18 +1110,7 @@ nav {
   font-size: 14px;
 }
 
-.polling-location-text {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 40px;
-  border: 3px solid var(--primary-color);
-  border-radius: 20px;
-  box-shadow: var(--image-shadow);
-  margin-top: 2rem;
-}
-
-/* ==========================================
-   Early Voting Modal
-   ========================================== */
+/* Early Voting Modal */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -1174,6 +1163,169 @@ nav {
 
 .modal-close:hover {
   background: rgba(0, 0, 0, 0.9);
+}
+
+/* Voter Registration Section */
+.voter-registration-text {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px;
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  box-shadow: var(--image-shadow);
+  margin-top: 2rem;
+}
+
+.registered-to-vote-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.registered-to-vote-grid-item {
+  background-color: rgba(217, 183, 108, 0.5);
+  padding: 40px;
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  box-shadow: var(--image-shadow);
+  margin-top: 2rem;
+}
+
+.registered-to-vote-grid-item h3 {
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.3;
+  color: var(--black);
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.voter-registration-text h2 {
+  letter-spacing: 3px;
+  color: var(--black);
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  font-family: var(--font-heading);
+  letter-spacing: var(--letter-spacing);
+}
+
+.voter-registration-text h4 {
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--black);
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.voter-registration-status p {
+  color: var(--black);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 18px;
+}
+
+.voter-registration-status h4 {
+  color: var(--secondary-color);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+}
+
+.voter-registration-box-text {
+  height: 200px;
+}
+
+.voter-registration-check-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  height: 50px;
+  width: 230px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.voter-registration-check-btn:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 1.5px solid var(--primary-color);
+}
+
+.know-your-voting-rights-text-box {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px;
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  box-shadow: var(--image-shadow);
+  margin-top: 2rem;
+}
+
+.know-your-voting-rights h2 {
+  letter-spacing: 3px;
+  color: var(--black);
+  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
+    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  font-family: var(--font-heading);
+  letter-spacing: var(--letter-spacing);
+}
+
+.know-your-voting-rights h4 {
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--black);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.know-your-voting-rights-list {
+  background-color: rgba(111, 175, 123, 0.5);
+  padding: 40px;
+  border: 3px solid var(--primary-color);
+  border-radius: 20px;
+  box-shadow: var(--image-shadow);
+}
+
+.know-your-voting-rights-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.know-your-voting-rights ul {
+  margin-top: -2rem;
+}
+
+.know-your-voting-rights ul li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
+  margin-top: 10px;
 }
 
 /* ==========================================
