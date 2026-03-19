@@ -33,7 +33,7 @@ function updateCountdown() {
   // Only run on pages that have the countdown clock
   if (!daysEl) return;
 
-  const targetDate = new Date("2026-08-06T05:00:00Z");
+  const targetDate = new Date("2026-08-06T04:00:00Z");
   const now = new Date();
   const diff = targetDate - now;
 
