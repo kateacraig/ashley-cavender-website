@@ -777,6 +777,7 @@ nav {
     url(../images/issues-page-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .issues-ashley-text-box {
@@ -931,7 +932,24 @@ nav {
    ========================================== */
 /* Events Header */
 .events-ashley {
-  text-align: center;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.6),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../images/background-events-bwxt-protest.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding: 100px 0;
+}
+
+.events-ashley-text {
+  background-color: rgba(42, 41, 41, 0.7);
+  padding: 40px 0;
+  border: 3px solid var(--secondary-color);
+  border-radius: 20px;
+  margin-top: -2rem;
 }
 
 .events-ashley h2 {
@@ -941,6 +959,7 @@ nav {
     0.5px 0.5px 0 var(--primary-color);
   font-size: 45px;
   font-weight: 500;
+  text-align: center;
 }
 
 .events-ashley h3 {
@@ -948,6 +967,7 @@ nav {
   font-size: 26px;
   font-weight: 400;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* ==========================================
@@ -963,10 +983,11 @@ nav {
     url(../images/ashley-election-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top;
 }
 
 .election-day {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(42, 41, 41, 0.7);
   padding: 40px;
   border: 3px solid var(--primary-color);
   border-radius: 20px;
@@ -991,9 +1012,9 @@ nav {
   font-size: 26px;
   font-weight: 400;
   line-height: 1.3;
-  color: var(--black);
-  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
-    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+  color: var(--white);
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
   text-align: center;
   margin-top: 2rem;
 }
@@ -1011,7 +1032,7 @@ nav {
 }
 
 .how-to-vote-grid-item {
-  background-color: rgba(62, 89, 116, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 40px;
   border: 3px solid var(--primary-color);
   border-radius: 20px;
@@ -1167,7 +1188,7 @@ nav {
 
 /* Voter Registration Section */
 .voter-registration-text {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(100, 100, 100, 0.6);
   padding: 40px;
   border: 3px solid var(--primary-color);
   border-radius: 20px;
@@ -1219,9 +1240,9 @@ nav {
   font-size: 26px;
   font-weight: 400;
   line-height: 1.3;
-  color: var(--black);
-  text-shadow: -0.5px -0.5px 0 var(--white), 0.5px -0.5px 0 var(--white),
-    -0.5px 0.5px 0 var(--white), 0.5px 0.5px 0 var(--white);
+  color: var(--white);
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
   text-align: center;
   margin-top: 2rem;
 }
@@ -1296,7 +1317,9 @@ nav {
   font-size: 26px;
   font-weight: 400;
   line-height: 1.3;
-  color: var(--black);
+  color: var(--white);
+  text-shadow: -0.5px -0.5px 0 var(--black), 0.5px -0.5px 0 var(--black),
+    -0.5px 0.5px 0 var(--black), 0.5px 0.5px 0 var(--black);
   text-align: center;
   margin-top: 2rem;
 }
@@ -1307,6 +1330,10 @@ nav {
   border: 3px solid var(--primary-color);
   border-radius: 20px;
   box-shadow: var(--image-shadow);
+}
+
+.know-your-voting-rights-mobile {
+  display: none;
 }
 
 .know-your-voting-rights-list-grid {
@@ -1333,7 +1360,24 @@ nav {
    ========================================== */
 /* News Header */
 .news-ashley {
-  text-align: center;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.6),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../images/background-news-ashley-garden.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding: 100px 0;
+}
+
+.news-ashley-text {
+  background-color: rgba(42, 41, 41, 0.7);
+  padding: 40px 0;
+  border: 3px solid var(--secondary-color);
+  border-radius: 20px;
+  margin-top: -2rem;
 }
 
 .news-ashley h2 {
@@ -1343,6 +1387,7 @@ nav {
     0.5px 0.5px 0 var(--primary-color);
   font-size: 45px;
   font-weight: 500;
+  text-align: center;
 }
 
 .news-ashley h3 {
@@ -1350,6 +1395,7 @@ nav {
   font-size: 26px;
   font-weight: 400;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* ==========================================
@@ -1792,9 +1838,32 @@ footer h3 {
   .modal-content {
     max-width: 80vw;
   }
+
+  .how-to-vote-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+  }
+
+  .election-ashley h2 {
+    font-size: 55px;
+  }
+
+  .voting-info-text {
+    height: 260px;
+  }
+
+  .voter-registration-text h2 {
+    font-size: 55px;
+  }
+
+  .know-your-voting-rights h2 {
+    font-size: 55px;
+  }
 }
 
-/* 940px breakpoint */
+/* 768px breakpoint */
 @media (max-width: 768px) {
   .container {
     padding: 0 3rem;
@@ -2004,17 +2073,41 @@ footer h3 {
     display: none;
   }
 
+  .election-day {
+    padding: 20px;
+  }
+
+  .election-ashley h2 {
+    font-size: 50px;
+  }
+
   .how-to-vote-grid {
     grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  .voting-info-text {
+    height: 300px;
   }
 
   .how-to-vote-grid-item {
-    background-color: rgba(62, 89, 116, 0.5);
     padding: 15px;
-    border: 3px solid var(--primary-color);
-    border-radius: 20px;
-    box-shadow: var(--image-shadow);
-    margin-top: 2rem;
+  }
+
+  .registered-to-vote-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .voter-registration-text {
+    padding: 20px;
+  }
+
+  .registered-to-vote-grid-item {
+    padding: 15px;
+  }
+
+  .voter-registration-box-text {
+    height: 320px;
   }
 
   /* Early Voting Modal Adjustments */
@@ -2028,6 +2121,27 @@ footer h3 {
     width: 32px;
     height: 32px;
     font-size: 1.2rem;
+  }
+
+  .voter-registration-text h2 {
+    font-size: 50px;
+  }
+
+  .know-your-voting-rights-text-box {
+    padding: 20px;
+  }
+
+  .know-your-voting-rights h2 {
+    font-size: 50px;
+  }
+
+  .know-your-voting-rights-list-grid {
+    display: none;
+  }
+
+  .know-your-voting-rights-mobile {
+    display: inline-block;
+    margin: 0 auto;
   }
 
   /* Contact Page Adjustments */
